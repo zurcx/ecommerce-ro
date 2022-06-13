@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
+    'cart.apps.CartConfig',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +153,5 @@ import socket  # noqa
 
 hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+
+CART_SESSION_ID = "cart"
