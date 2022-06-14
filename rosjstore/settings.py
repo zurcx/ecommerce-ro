@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # apps terceiros
     'debug_toolbar',
+    # 'widget-tweaks',
 
     # My apps
 
