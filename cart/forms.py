@@ -1,9 +1,11 @@
 from tkinter import Widget
 
 from django import forms
+from django.conf import settings
 from django.forms import HiddenInput
 
-PRODUCT_QUANTITY_CHOICES = [(i, str(i)) for i in range(1, 21)]
+PRODUCT_QUANTITY_CHOICES = [(i, str(i)) for i in range(
+    1, settings.CART_ITEM_MAX_QUANTITY + 1)]
 
 
 class CartAddProductForm(forms.Form):

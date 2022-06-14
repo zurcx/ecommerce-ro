@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     # apps terceiros
     'debug_toolbar',
-    # 'widget-tweaks',
+    'widget_tweaks',
 
     # My apps
 
@@ -156,3 +156,4 @@ hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 CART_SESSION_ID = "cart"
+CART_ITEM_MAX_QUANTITY = 20

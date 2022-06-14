@@ -4,7 +4,7 @@ from decimal import Decimal
 from django.conf import settings
 from products.models import Product
 
-#from .forms import CartAddProductForm
+from .forms import CartAddProductForm
 
 
 class Cart:
@@ -25,9 +25,9 @@ class Cart:
         for item in cart.values():
             item["price"] = Decimal(item["price"])
             item["total_price"] = item["quantity"] * item["price"]
-            # item["update_quantity_form"] = CartAddProductForm(
-            #     initial={"quantity": item["quantity"], "override": True}
-            # )
+            item["update_quantity_form"] = CartAddProductForm(
+                initial={"quantity": item["quantity"], "override": True}
+            )
 
             yield item
 
