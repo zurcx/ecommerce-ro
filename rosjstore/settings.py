@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # apps terceiros
     'debug_toolbar',
     'widget_tweaks',
+    'crispy_forms',
+
 
     # My apps
 
@@ -51,6 +53,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
 ]
 
 MIDDLEWARE = [
@@ -157,3 +160,6 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 CART_SESSION_ID = "cart"
 CART_ITEM_MAX_QUANTITY = 20
+
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
